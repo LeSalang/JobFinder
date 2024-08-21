@@ -1,0 +1,35 @@
+[versions]
+## core:
+activity = "1.9.1"
+agp = "8.5.2"
+appcompat = "1.7.0"
+constraintlayout = "2.1.4"
+coreKtx = "1.13.1"
+jvm-target = "1.8"
+kotlin = "1.9.0"
+material = "1.12.0"
+sdk-compile = "34"
+sdk-min = "24"
+sdk-target = "34"
+
+## detekt:
+detekt = "1.23.3"
+
+[libraries]
+## core:
+androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+
+## detekt:
+detekt-formatting = { group = "io.gitlab.arturbosch.detekt", name = "detekt-formatting", version.ref = "detekt" }
+
+[plugins]
+## core:
+android-application = { id = "com.android.application", version.ref = "agp" }
+jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+
+## detekt:
+detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt"}
