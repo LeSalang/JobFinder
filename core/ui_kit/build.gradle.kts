@@ -1,18 +1,14 @@
 plugins {
-    alias(libs.plugins.android.application)
+    alias(libs.plugins.android.library)
     alias(libs.plugins.jetbrains.kotlin.android)
 }
 
 android {
-    namespace = "com.lesa.testjobfinderapp"
+    namespace = "com.lesa.ui_kit"
     compileSdk = libs.versions.sdk.compile.get().toInt()
 
     defaultConfig {
-        applicationId = "com.lesa.testjobfinderapp"
         minSdk = libs.versions.sdk.min.get().toInt()
-        targetSdk = libs.versions.sdk.target.get().toInt()
-        versionCode = 1
-        versionName = "1.0"
     }
 
     buildTypes {
@@ -30,13 +26,7 @@ android {
 }
 
 dependencies {
-    // core:
-    implementation(libs.androidx.activity)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.appcompat)
     implementation(libs.material)
-
-    // modules:
-    implementation(project(":core:ui_kit"))
 }

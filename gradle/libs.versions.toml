@@ -33,3 +33,4 @@ jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = 
 
 ## detekt:
 detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt"}
+android-library = { id = "com.android.library", version.ref = "agp" }
