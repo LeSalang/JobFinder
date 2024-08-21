@@ -22,3 +22,4 @@ dependencyResolutionManagement {
 rootProject.name = "TestJobFinderApp"
 include(":app")
 include(":core:ui_kit")
+include(":screens:login:login_ui")

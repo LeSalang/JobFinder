@@ -6,11 +6,9 @@ plugins {
 android {
     namespace = "com.lesa.ui_kit"
     compileSdk = libs.versions.sdk.compile.get().toInt()
-
     defaultConfig {
         minSdk = libs.versions.sdk.min.get().toInt()
     }
-
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -28,5 +26,5 @@ android {
 dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
-    implementation(libs.material)
+    api(libs.material)
 }
