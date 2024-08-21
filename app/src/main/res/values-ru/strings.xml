@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TestJobFinderApp</string>
+    <string name="title_favourites">Избранное</string>
+    <string name="title_messages">Сообщения</string>
+    <string name="title_profile">Профиль</string>
+    <string name="title_responses">Отклики</string>
+    <string name="title_search">Поиск</string>
+</resources>

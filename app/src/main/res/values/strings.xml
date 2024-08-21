@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">TestJobFinderApp</string>
+
+    <string name="title_favourites">Favourites</string>
+    <string name="title_messages">Messages</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_responses">Responses</string>
+    <string name="title_search">Search</string>
 </resources>
