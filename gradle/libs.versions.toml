@@ -12,11 +12,10 @@ sdk-compile = "34"
 sdk-min = "24"
 sdk-target = "34"
 
-## detekt:
+## other:
 detekt = "1.23.3"
-junit = "4.13.2"
-junitVersion = "1.2.1"
-espressoCore = "3.6.1"
+viewbindingpropertydelegate = "1.5.9"
+
 
 [libraries]
 ## core:
@@ -26,17 +25,17 @@ androidx-constraintlayout = { group = "androidx.constraintlayout", name = "const
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 
-## detekt:
+## other:
 detekt-formatting = { group = "io.gitlab.arturbosch.detekt", name = "detekt-formatting", version.ref = "detekt" }
-junit = { group = "junit", name = "junit", version.ref = "junit" }
-androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
-androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+kirich1409-viewbindingpropertydelegate = { group = "com.github.kirich1409", name = "viewbindingpropertydelegate", version.ref = "viewbindingpropertydelegate" }
 
+## ui
 [plugins]
 ## core:
 android-application = { id = "com.android.application", version.ref = "agp" }
+android-library = { id = "com.android.library", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 
-## detekt:
+## other:
 detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt"}
-android-library = { id = "com.android.library", version.ref = "agp" }
+
