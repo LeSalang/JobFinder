@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Regular Button Styles -->
+    <style name="BtnRegularStyle">
+        <item name="android:textColor">@color/btn_text_color_selector</item>
+    </style>
+
+    <!-- Rounded Button Styles -->
+    <style name="BtnSmall" parent="BtnRegularStyle">
+        <item name="height">40dp</item>
+        <item name="android:textAppearance">@style/ButtonText2</item>
+    </style>
+
+    <style name="BtnSmallBlue" parent="BtnSmall">
+        <item name="android:background">@drawable/btn_rounded_blue_bg</item>
+    </style>
+
+    <style name="BtnSmallGreen" parent="BtnSmall">
+        <item name="android:background">@drawable/btn_rounded_green_bg</item>
+    </style>
+
+    <style name="BtnBig" parent="BtnRegularStyle">
+        <item name="height">48dp</item>
+        <item name="android:textAppearance">@style/ButtonText1</item>
+    </style>
+
+    <style name="BtnBigBlue" parent="BtnBig">
+        <item name="android:background">@drawable/btn_rounded_blue_bg</item>
+    </style>
+
+    <style name="BtnBigGreen" parent="BtnBig">
+        <item name="android:background">@drawable/btn_rounded_green_bg</item>
+    </style>
+
+    <!-- Pill Button Styles -->
+    <style name="BtnPill" parent="BtnRegularStyle">
+        <item name="height">32dp</item>
+        <item name="android:background">@drawable/btn_pill_green_bg</item>
+        <item name="android:textAppearance">@style/ButtonText1</item>
+    </style>
+
+</resources>
