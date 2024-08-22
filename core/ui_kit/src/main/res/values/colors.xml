@@ -18,5 +18,6 @@
 
     <!-- Shadow Color -->
     <color name="shadow">#0C0C0C</color>
+    <color name="transparent">#00000000</color>
 
 </resources>

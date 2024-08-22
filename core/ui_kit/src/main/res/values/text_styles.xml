@@ -3,6 +3,7 @@
     <!-- Base Font Styles -->
     <style name="BaseFontStyle">
         <item name="android:fontFamily">@font/sf_pro_display_medium</item>
+        <item name="android:textColor">@color/white</item>
     </style>
 
     <!-- Title Styles -->

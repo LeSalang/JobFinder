@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="email">Электронная почта</string>
+    <string name="employees_searching">Поиск сотрудников</string>
+    <string name="login_fragment_title">Вход в личный аккаунт</string>
+    <string name="login_with_password">Войти с паролем</string>
+    <string name="looking_for_employees">Я ищу сотрудников</string>
+    <string name="placement_of_vacancies">Размещение вакансий и доступ к базе резюме</string>
+    <string name="resume">Продолжить</string>
+    <string name="work_searching">Поиск работы</string>
+</resources>

@@ -38,4 +38,5 @@ dependencies {
 
     // modules:
     implementation(project(":core:ui_kit"))
+    implementation(project(":screens:login:login_ui"))
 }

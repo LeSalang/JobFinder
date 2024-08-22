@@ -1,6 +1,150 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginFragment"/>
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black"
+    android:orientation="vertical"
+    android:paddingHorizontal="16dp"
+    tools:context=".LoginFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/login_fragment_title"
+        style="@style/Title2"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingVertical="16dp"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="24dp"
+                android:orientation="vertical"
+                android:background="@drawable/placeholder_bg"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/work_searching"
+                    android:layout_marginBottom="16dp"
+                    style="@style/Title3"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/placeholder_text_bg"
+                    android:layout_marginBottom="16dp"
+                    android:gravity="center_vertical"
+                    >
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_responses"
+                        android:layout_marginStart="8dp"
+                        app:tint="@color/grey_4"
+                        android:visibility="visible"
+                        />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="8dp"
+                        android:inputType="textEmailAddress"
+                        android:hint="@string/email"
+                        android:background="@color/transparent"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/grey_4"
+                        android:layout_weight="1"
+                        />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_close"
+                        android:layout_marginEnd="8dp"
+                        app:tint="@color/white"
+                        android:visibility="visible"
+                        />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal"
+                    >
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/resume"
+                        style="@style/BtnSmallBlue"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="@string/login_with_password"
+                        android:gravity="center"
+                        android:layout_marginStart="24dp"
+                        android:maxLines="1"
+                        android:textColor="@color/blue"
+                        style="@style/ButtonText2"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="24dp"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/placeholder_bg"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/employees_searching"
+                    android:layout_marginBottom="16dp"
+                    style="@style/Title3"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/placement_of_vacancies"
+                    android:layout_marginBottom="16dp"
+                    style="@style/Title4"
+                    />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:gravity="center"
+                    android:text="@string/looking_for_employees"
+                    style="@style/BtnPill"
+                    />
+
+            </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
