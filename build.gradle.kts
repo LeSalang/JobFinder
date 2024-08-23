@@ -2,15 +2,17 @@ import io.gitlab.arturbosch.detekt.extensions.DetektExtension
 
 plugins {
     alias(libs.plugins.android.application) apply false
-    alias(libs.plugins.jetbrains.kotlin.android) apply false
-    alias(libs.plugins.detekt) apply true
     alias(libs.plugins.android.library) apply false
+    alias(libs.plugins.detekt) apply true
+    alias(libs.plugins.hilt) apply false
+    alias(libs.plugins.kotlin.android) apply false
+    alias(libs.plugins.kotlin.kapt) apply false
 }
 
 allprojects.onEach {
     it.afterEvaluate {
         with(project.plugins) {
-            if (hasPlugin(libs.plugins.jetbrains.kotlin.android.get().pluginId)) {
+            if (hasPlugin(libs.plugins.kotlin.android.get().pluginId)) {
                 apply(libs.plugins.detekt.get().pluginId)
                 extensions.configure<DetektExtension> {
                     config.setFrom(rootProject.files("detekt-config.yml"))
