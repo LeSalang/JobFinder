@@ -6,4 +6,17 @@
     <string name="title_profile">Профиль</string>
     <string name="title_responses">Отклики</string>
     <string name="title_search">Поиск</string>
+
+    <string name="viewing_1_chelovek">Сейчас просматривает 1 человек</string>
+    <string name="viewing_n_chelovek">Сейчас просматривают %d человек</string>
+    <string name="viewing_n_cheloveka">Сейчас просматривают %d человека</string>
+    <string name="respond">Откликнуться</string>
+
+    <plurals name="viewing_people">
+        <item quantity="one">Сейчас просматривает %d человек</item>
+        <item quantity="few">Сейчас просматривают %d человека</item>
+        <item quantity="many">Сейчас просматривают %d человек</item>
+        <item quantity="other">Сейчас просматривает %d человек</item>
+    </plurals>
+
 </resources>

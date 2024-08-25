@@ -6,4 +6,15 @@
     <string name="title_profile">Profile</string>
     <string name="title_responses">Responses</string>
     <string name="title_search">Search</string>
+
+    <string name="viewing_1_chelovek">1 person is viewing now</string>
+    <string name="viewing_n_chelovek">%d people are viewing now</string>
+    <string name="viewing_n_cheloveka">%d people are viewing now</string>
+    <string name="respond">Respond</string>
+
+    <plurals name="viewing_people">
+        <item quantity="one">%d person is viewing now</item>
+        <item quantity="other">%d people are viewing now</item>
+    </plurals>
+
 </resources>

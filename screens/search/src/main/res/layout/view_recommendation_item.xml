@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="132dp"
+    android:layout_height="132dp"
+    android:background="@drawable/placeholder_bg"
+    android:paddingHorizontal="8dp"
+    android:paddingVertical="8dp"
+    android:padding="16dp"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    >
+
+    <ImageView
+        android:id="@+id/icRecommendation"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/ic_list_on_circle" />
+
+    <TextView
+        android:id="@+id/recommendationTitle"
+        style="@style/Title4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Поднять резюме в поиске"
+        android:maxLines="2"
+        />
+
+    <TextView
+        android:id="@+id/recommendationBtnText"
+        style="@style/Title4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Поднять"
+        android:maxLines="1"
+        android:textColor="@color/green"
+        />
+
+
+</LinearLayout>
