@@ -14,6 +14,7 @@
             <option value="$PROJECT_DIR$/core/ui_kit" />
             <option value="$PROJECT_DIR$/screens" />
             <option value="$PROJECT_DIR$/screens/login" />
+            <option value="$PROJECT_DIR$/screens/verification" />
           </set>
         </option>
         <option name="resolveExternalAnnotations" value="false" />

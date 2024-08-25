@@ -49,4 +49,5 @@ dependencies {
     // modules:
     implementation(project(":core:ui_kit"))
     implementation(project(":screens:login"))
+    implementation(project(":screens:verification"))
 }

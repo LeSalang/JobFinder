@@ -1,10 +1,12 @@
 plugins {
     alias(libs.plugins.android.library)
+    alias(libs.plugins.hilt)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.kotlin.kapt)
 }
 
 android {
-    namespace = "com.lesa.ui_kit"
+    namespace = "com.lesa.login"
     compileSdk = libs.versions.sdk.compile.get().toInt()
     defaultConfig {
         minSdk = libs.versions.sdk.min.get().toInt()
@@ -21,16 +23,17 @@ android {
     kotlinOptions {
         jvmTarget = libs.versions.jvm.target.get()
     }
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
-    // core:
-    api(libs.androidx.appcompat)
-    api(libs.androidx.core.ktx)
-    api(libs.androidx.fragment.ktx)
-    api(libs.androidx.lifecycle.viewmodel.ktx)
-    api(libs.material)
+    // di:
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.compiler)
 
-    // other:
-    api(libs.kirich1409.viewbindingpropertydelegate)
+    // modules:
+    implementation(project(":core:ui_kit"))
 }
+

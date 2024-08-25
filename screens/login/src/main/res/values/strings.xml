@@ -1,0 +1,11 @@
+<resources>
+    <string name="email">Email</string>
+    <string name="employees_searching">Employees searching</string>
+    <string name="login_fragment_title">Log in to your personal account</string>
+    <string name="login_with_password">Login with password</string>
+    <string name="looking_for_employees">I\'m looking for employees</string>
+    <string name="placement_of_vacancies">Placement of vacancies and access to the resume database</string>
+    <string name="resume">Resume</string>
+    <string name="work_searching">Work searching</string>
+    <string name="incorrect_email">You entered an incorrect e-mail</string>
+</resources>

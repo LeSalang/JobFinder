@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="code_sent_message">We sent the code to %s</string>
+    <string name="enter_code_message">Enter it to confirm that it is you, and not someone else, logging into your account.</string>
+    <string name="asterisk">*</string>
+    <string name="confirm">Confirm</string>
+</resources>

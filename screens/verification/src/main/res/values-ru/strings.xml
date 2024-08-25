@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="code_sent_message">Отправили код на %s</string>
+    <string name="enter_code_message">Напишите его, чтобы подтвердить, что это вы, а не кто-то другой входит в личный кабинет.</string>
+    <string name="asterisk">*</string>
+    <string name="confirm">Подтвердить</string>
+</resources>

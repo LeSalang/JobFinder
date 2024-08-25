@@ -23,3 +23,4 @@ rootProject.name = "TestJobFinderApp"
 include(":app")
 include(":core:ui_kit")
 include(":screens:login")
+include(":screens:verification")
