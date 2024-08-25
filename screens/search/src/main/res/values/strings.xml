@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="search_hint">Position, keywords</string>
+    <string name="vacancies_for_you">Vacancies for you</string>
+    <plurals name="vacancies_left">
+        <item quantity="one">%d vacancy</item>
+        <item quantity="other">%d vacancies</item>
+    </plurals>
+    <string name="more">More</string>
+    <string name="by_correspondence">By correspondence</string>
+</resources>
