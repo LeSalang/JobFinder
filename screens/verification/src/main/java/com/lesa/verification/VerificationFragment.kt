@@ -15,6 +15,14 @@ class VerificationFragment : Fragment(R.layout.fragment_verification) {
         super.onViewCreated(view, savedInstanceState)
 
         setupConfirmButton()
+        setupEmailInTitle()
+    }
+
+    private fun setupEmailInTitle() {
+        val email = arguments?.getString(VERIFICATION_KEY)
+        if (email != null) {
+            binding.emailTitle.text = getString(R.string.code_sent_message, email)
+        }
     }
 
     private fun setupConfirmButton() {
@@ -34,6 +42,18 @@ class VerificationFragment : Fragment(R.layout.fragment_verification) {
 
             confirmButton.setBackgroundResource(buttonBackground)
             confirmButton.setTextColor(resources.getColor(buttonTextColor, null))
+        }
+    }
+
+    companion object {
+        private const val VERIFICATION_KEY = "verification_key"
+
+        fun getNewInstance(email: String): VerificationFragment {
+            return VerificationFragment().apply {
+                arguments = Bundle().apply {
+                    putString(VERIFICATION_KEY, email)
+                }
+            }
         }
     }
 }

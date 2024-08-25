@@ -8,14 +8,22 @@ import android.widget.EditText
 import android.widget.ImageView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.lifecycleScope
 import by.kirich1409.viewbindingdelegate.viewBinding
+import com.github.terrakok.cicerone.androidx.FragmentScreen
 import com.lesa.login.databinding.FragmentLoginBinding
+import com.lesa.navigation.Navigator
+import com.lesa.verification.VerificationFragment
 import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class LoginFragment : Fragment(R.layout.fragment_login) {
     private val binding: FragmentLoginBinding by viewBinding()
     private val viewModel: LoginViewModel by viewModels()
+
+    @Inject
+    lateinit var navigator: Navigator
 
     override fun onViewCreated(
         view: View,
@@ -36,10 +44,12 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
         setupResumeButton(resumeButton, emailInputField)
     }
 
+    @Suppress("EmptyFunctionBlock")
     private fun setupEditText(editText: EditText) {
         editText.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable?) {
                 viewModel.onEmailTextChanged(s.isNullOrEmpty())
+                viewModel.email.value = s.toString()
             }
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
@@ -70,9 +80,12 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
                     com.lesa.ui_kit.R.drawable.placeholder_text_bg_error
                 }
             )
-
-            if (isValid) {
-                // TODO: Send email to the next screen
+        }
+        lifecycleScope.launchWhenStarted {
+            viewModel.openVerificationScreen.collect {
+                navigator.navigateToScreen(
+                    FragmentScreen { VerificationFragment.getNewInstance(viewModel.email.value) }
+                )
             }
         }
 

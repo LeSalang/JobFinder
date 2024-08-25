@@ -38,6 +38,7 @@ class OtpView @JvmOverloads constructor(
         setupEditTexts()
     }
 
+    @Suppress("EmptyFunctionBlock")
     private fun setupEditTexts() {
         for (i in editTexts.indices) {
             editTexts[i].apply {

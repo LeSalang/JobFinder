@@ -24,8 +24,8 @@
         app:menu="@menu/bottom_nav_menu" />
 
     <androidx.fragment.app.FragmentContainerView
+        android:background="@color/green"
         android:id="@+id/fragment_container"
-        android:name="com.lesa.verification.VerificationFragment"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"

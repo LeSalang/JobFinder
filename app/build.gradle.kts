@@ -47,6 +47,7 @@ dependencies {
     implementation(libs.kirich1409.viewbindingpropertydelegate)
 
     // modules:
+    implementation(project(":core:navigation"))
     implementation(project(":core:ui_kit"))
     implementation(project(":screens:login"))
     implementation(project(":screens:verification"))
