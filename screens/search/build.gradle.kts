@@ -36,5 +36,6 @@ dependencies {
     // modules:
     implementation(project(":core:navigation"))
     implementation(project(":core:ui_kit"))
+    implementation(project(":data"))
 }
 

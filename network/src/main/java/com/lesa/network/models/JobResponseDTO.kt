@@ -1,6 +1,11 @@
 package com.lesa.network.models
 
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
+
+@Serializable
 data class JobResponseDTO(
-    val vacancies: List<VacancyDTO>,
-    val offers: List<OfferDTO>
+    @SerialName("offers") val offers: List<OfferDTO>,
+    @SerialName("vacancies") val vacancies: List<VacancyDTO>,
+
 )

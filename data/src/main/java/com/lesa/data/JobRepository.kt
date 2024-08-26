@@ -8,14 +8,14 @@ import com.lesa.network.Api
 import javax.inject.Inject
 
 interface JobRepository {
-    suspend fun getAllVacancy(): List<Vacancy>
+    suspend fun getAllVacancies(): List<Vacancy>
     suspend fun getAllOffers(): List<Offer>
 }
 
 class JobRepositoryImpl @Inject constructor(
     private val api: Api
 ) : JobRepository {
-    override suspend fun getAllVacancy(): List<Vacancy> {
+    override suspend fun getAllVacancies(): List<Vacancy> {
         return api.getJobResponse().vacancies.map {
             it.toVacancy()
         }

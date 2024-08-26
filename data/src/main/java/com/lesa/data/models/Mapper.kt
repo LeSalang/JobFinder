@@ -6,13 +6,22 @@ import com.lesa.network.models.VacancyDTO
 internal fun VacancyDTO.toVacancy(): Vacancy {
     return Vacancy(
         id = id,
+        lookingNumber = lookingNumber,
         title = title,
-        experience = experience,
-        employment = employment,
-        description = description,
-        city = city,
+        town = address?.town,
+        street = address?.street,
+        house = address?.house,
         company = company,
-        date = date,
+        experiencePreviewText = experience?.previewText,
+        experienceText = experience?.text,
+        publishedDate = publishedDate,
+        isFavorite = isFavorite,
+        fullSalary = salary?.full,
+        schedules = schedules,
+        appliedNumber = appliedNumber,
+        description = description,
+        responsibilities = responsibilities,
+        questions = questions
     )
 }
 
@@ -20,6 +29,7 @@ internal fun OfferDTO.toOffer(): Offer {
     return Offer(
         id = id,
         title = title,
-        description = description,
+        buttonText = button?.text,
+        link = link
     )
 }
