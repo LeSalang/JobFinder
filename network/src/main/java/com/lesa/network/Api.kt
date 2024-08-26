@@ -1,7 +1,7 @@
 package com.lesa.network
 
 import MockInterceptor
-import com.lesa.network.models.JobResponse
+import com.lesa.network.models.JobResponseDTO
 import com.skydoves.retrofit.adapters.result.ResultCallAdapterFactory
 import kotlinx.serialization.json.Json
 import okhttp3.MediaType.Companion.toMediaType
@@ -14,7 +14,7 @@ import retrofit2.http.GET
 
 interface Api {
     @GET("mock/jobs")
-    suspend fun getJobResponse(): JobResponse
+    suspend fun getJobResponse(): JobResponseDTO
 }
 
 fun createApi(mockJsonFileName: String = "mock_jobs.json"): Api {

@@ -1,4 +1,4 @@
-package com.lesa.network.models
+package com.lesa.data.models
 
 data class Offer(
     val id: String,

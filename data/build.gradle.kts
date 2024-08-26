@@ -26,8 +26,14 @@ android {
 }
 
 dependencies {
+    // core:
+    implementation(libs.kotlinx.coroutines.core)
+
     // di:
     implementation(libs.hilt.android)
     kapt(libs.hilt.compiler)
+
+    // modules:
+    implementation(project(":network"))
 }
 
