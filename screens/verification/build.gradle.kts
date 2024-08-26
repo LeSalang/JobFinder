@@ -35,4 +35,6 @@ dependencies {
 
     // modules:
     implementation(project(":core:ui_kit"))
+    implementation(project(":core:navigation"))
+    implementation(project(":screens:search"))
 }

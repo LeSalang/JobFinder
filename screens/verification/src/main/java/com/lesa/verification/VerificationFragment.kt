@@ -4,18 +4,37 @@ import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import by.kirich1409.viewbindingdelegate.viewBinding
+import com.github.terrakok.cicerone.androidx.FragmentScreen
+import com.lesa.navigation.Navigator
+import com.lesa.search.SearchFragment
 import com.lesa.verification.databinding.FragmentVerificationBinding
 import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class VerificationFragment : Fragment(R.layout.fragment_verification) {
     private val binding: FragmentVerificationBinding by viewBinding()
 
+    @Inject
+    lateinit var navigator: Navigator
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         setupConfirmButton()
         setupEmailInTitle()
+        onConfirmButtonClicked()
+    }
+
+    private fun onConfirmButtonClicked() {
+        binding.buttonConfirm.setOnClickListener {
+            if (binding.otpView.getOtp().length == 4) {
+                navigator.navigateToScreen(
+                    FragmentScreen {
+                        SearchFragment()
+                    }
+                )
+            }
+        }
     }
 
     private fun setupEmailInTitle() {
@@ -27,6 +46,8 @@ class VerificationFragment : Fragment(R.layout.fragment_verification) {
 
     private fun setupConfirmButton() {
         val confirmButton = binding.buttonConfirm
+        confirmButton.setBackgroundResource(com.lesa.ui_kit.R.drawable.btn_rounded_blue_bg_disabled)
+        confirmButton.setTextColor(resources.getColor(com.lesa.ui_kit.R.color.grey_4, null))
 
         binding.otpView.setOnOtpChangedListener { allFilled ->
             val buttonBackground = if (allFilled) {
