@@ -1,7 +1,7 @@
 package com.lesa.data.models
 
 data class Vacancy(
-    val id: String? = null,
+    val id: String,
     val lookingNumber: Int? = null,
     val title: String? = null,
     val town: String? = null,

@@ -4,11 +4,9 @@
     android:layout_width="132dp"
     android:layout_height="132dp"
     android:background="@drawable/placeholder_bg"
-    android:paddingHorizontal="8dp"
-    android:paddingVertical="8dp"
-    android:padding="16dp"
+    android:padding="8dp"
+    android:layout_marginEnd="8dp"
     xmlns:tools="http://schemas.android.com/tools"
-
     >
 
     <ImageView
@@ -16,7 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="32dp"
         android:layout_marginBottom="16dp"
-        android:src="@drawable/ic_list_on_circle" />
+        android:src="@drawable/ic_temporary_job" />
 
     <TextView
         android:id="@+id/recommendationTitle"

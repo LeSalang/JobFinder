@@ -1,7 +1,7 @@
 package com.lesa.search.models
 
 data class VacancyUI(
-    val id: String? = null,
+    val id: String,
     val lookingNumber: Int? = null,
     val title: String? = null,
     val town: String? = null,

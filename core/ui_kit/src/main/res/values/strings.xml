@@ -17,4 +17,6 @@
         <item quantity="other">%d people are viewing now</item>
     </plurals>
 
+    <string name="published_prefix">Published on</string>
+
 </resources>

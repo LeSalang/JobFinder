@@ -5,7 +5,7 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class VacancyDTO(
-    @SerialName("id") val id: String? = null,
+    @SerialName("id") val id: String,
     @SerialName("lookingNumber") val lookingNumber: Int? = null,
     @SerialName("title") val title: String? = null,
     @SerialName("address") val address: Address? = null,

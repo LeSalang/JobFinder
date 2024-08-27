@@ -19,4 +19,6 @@
         <item quantity="other">Сейчас просматривает %d человек</item>
     </plurals>
 
+    <string name="published_prefix">Опубликовано</string>
+
 </resources>
