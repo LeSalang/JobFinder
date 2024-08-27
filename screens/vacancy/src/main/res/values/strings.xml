@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="your_tasks">Your tasks</string>
+    <string name="ask_employer_question">Ask the employer a question</string>
+    <string name="employer_will_receive">They will receive it with your job application</string>
+    <string name="apply_now">Apply Now</string>
+</resources>

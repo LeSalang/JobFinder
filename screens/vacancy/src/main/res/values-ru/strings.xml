@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="your_tasks">Ваши задачи</string>
+    <string name="ask_employer_question">Задайте вопрос работодателю</string>
+    <string name="employer_will_receive">Он получит его с откликом на вакансию</string>
+    <string name="apply_now">Откликнуться</string>
+</resources>

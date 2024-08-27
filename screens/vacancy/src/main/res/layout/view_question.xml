@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/btn_pill_grey_bg"
+    android:paddingHorizontal="12dp"
+    android:paddingVertical="8dp"
+    android:layout_marginBottom="8dp">
+
+    <TextView
+        android:id="@+id/questionBtnText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Кнопка с вопросом"
+        style="@style/Title4"
+        android:layout_gravity="center" />
+</FrameLayout>
