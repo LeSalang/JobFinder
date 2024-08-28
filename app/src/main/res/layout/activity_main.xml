@@ -18,6 +18,7 @@
         app:itemTextAppearanceInactive="@style/Text1"
         app:itemTextColor="@color/icon_color_selector"
         app:labelVisibilityMode="labeled"
+        app:itemActiveIndicatorStyle="@color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

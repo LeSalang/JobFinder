@@ -42,10 +42,11 @@
                 android:layout_height="wrap_content"
                 android:text="@string/summary_for_response"
                 style="@style/Text1"
-                android:color="@color/grey_3"
+                android:textColor="@color/grey_3"
                 />
 
             <TextView
+                android:id="@+id/responseTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/summary_for_response"
@@ -77,7 +78,7 @@
             android:gravity="center"
             android:text="@string/add_cover_letter"
             style="@style/ButtonText1"
-            android:color="@color/green"
+            android:textColor="@color/green"
             android:visibility="visible"
             />
 

@@ -171,7 +171,11 @@ class VacancyFragment : Fragment(R.layout.fragment_vacancy) {
     private fun setUpVacancyApplyButton() {
         val button = binding.vacancyApplyButton
         button.setOnClickListener {
-            ResponseFragment().show(childFragmentManager, "response")
+            val vacancy = viewModel.vacancy.value
+            if (vacancy != null) {
+                val responseFragment = ResponseFragment.getNewInstance(vacancy)
+                responseFragment.show(childFragmentManager, "response")
+            }
         }
     }
 

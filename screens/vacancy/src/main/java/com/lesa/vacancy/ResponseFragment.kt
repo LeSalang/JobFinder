@@ -20,12 +20,29 @@ class ResponseFragment : DialogFragment() {
 
         val addCoverLetterButton = view.findViewById<TextView>(R.id.responseAddCoverLetter)
         val coverLetterEditText = view.findViewById<EditText>(R.id.responseYourCoverLetter)
+        val title = view.findViewById<TextView>(R.id.responseTitle)
 
         addCoverLetterButton.setOnClickListener {
             coverLetterEditText.visibility = View.VISIBLE
             addCoverLetterButton.visibility = View.GONE
         }
 
+        arguments?.getParcelable<VacancyUI>(RESPONSE_KEY)?.let {
+            title.text = it.title
+        }
+
         return dialog
+    }
+
+    companion object {
+        private const val RESPONSE_KEY = "response_key"
+
+        fun getNewInstance(vacancy: VacancyUI): ResponseFragment {
+            return ResponseFragment().apply {
+                arguments = Bundle().apply {
+                    putParcelable(RESPONSE_KEY, vacancy)
+                }
+            }
+        }
     }
 }
