@@ -17,5 +17,7 @@
         <item quantity="many">%d people have already responded</item>
         <item quantity="other">%d people have already responded</item>
     </plurals>
-
+    <string name="summary_for_response">Summary for the response</string>
+    <string name="add_cover_letter">Add Cover Letter</string>
+    <string name="your_cover_letter">Your Cover Letter</string>
 </resources>

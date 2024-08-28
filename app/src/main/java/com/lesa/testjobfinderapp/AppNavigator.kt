@@ -11,8 +11,6 @@ class AppNavigator @Inject constructor(private val cicerone: Cicerone<Router>) :
         cicerone.router.navigateTo(screen)
     }
 
-
-
     override fun back() {
         cicerone.router.exit()
     }

@@ -17,5 +17,7 @@
         <item quantity="many">%d человек уже откликнулись</item>
         <item quantity="other">%d человек уже откликнулись</item>
     </plurals>
-
+    <string name="summary_for_response">Резюме для отклика</string>
+    <string name="add_cover_letter">Добавить сопроводительное</string>
+    <string name="your_cover_letter">Ваше сопроводительное письмо</string>
 </resources>

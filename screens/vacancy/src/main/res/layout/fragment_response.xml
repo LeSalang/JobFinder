@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/placeholder_response_bg"
+    android:gravity="center_horizontal"
+    android:paddingHorizontal="16dp"
+    android:paddingBottom="12dp"
+    >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/knob"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="24dp"
+        android:gravity="center_vertical"
+        >
+        
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/avatar"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="16dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/summary_for_response"
+                style="@style/Text1"
+                android:color="@color/grey_3"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/summary_for_response"
+                style="@style/Title3"
+                android:color="@color/white"
+                android:layout_marginTop="8dp"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey_2"
+        android:layout_marginTop="24dp"
+        />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:layout_marginTop="16dp"
+        >
+
+        <TextView
+            android:id="@+id/responseAddCoverLetter"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/add_cover_letter"
+            style="@style/ButtonText1"
+            android:color="@color/green"
+            android:visibility="visible"
+            />
+
+        <EditText
+            android:id="@+id/responseYourCoverLetter"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/your_cover_letter"
+            style="@style/Text1"
+            android:visibility="gone"
+            />
+
+    </FrameLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/responseApplyButton"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="11dp"
+        android:gravity="center"
+        android:text="@string/apply_now"
+        android:enabled="true"
+        style="@style/BtnBigGreen" />
+
+</LinearLayout>

@@ -16,6 +16,7 @@ class VacancyFragment : Fragment(R.layout.fragment_vacancy) {
     private val viewModel: VacancyViewModel by viewModels()
     private val binding: FragmentVacancyBinding by viewBinding()
     private lateinit var questionAdapter: QuestionAdapter
+
     @Inject
     lateinit var navigator: Navigator
 
@@ -170,7 +171,7 @@ class VacancyFragment : Fragment(R.layout.fragment_vacancy) {
     private fun setUpVacancyApplyButton() {
         val button = binding.vacancyApplyButton
         button.setOnClickListener {
-            // TODO: Navigate to ApplicationFragment
+            ResponseFragment().show(childFragmentManager, "response")
         }
     }
 
