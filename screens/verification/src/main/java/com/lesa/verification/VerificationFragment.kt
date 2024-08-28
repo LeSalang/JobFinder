@@ -11,6 +11,8 @@ import com.lesa.verification.databinding.FragmentVerificationBinding
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
+private const val CODE_LENGTH = 4
+
 @AndroidEntryPoint
 class VerificationFragment : Fragment(R.layout.fragment_verification) {
     private val binding: FragmentVerificationBinding by viewBinding()
@@ -27,7 +29,7 @@ class VerificationFragment : Fragment(R.layout.fragment_verification) {
 
     private fun onConfirmButtonClicked() {
         binding.buttonConfirm.setOnClickListener {
-            if (binding.otpView.getOtp().length == 4) {
+            if (binding.otpView.getOtp().length == CODE_LENGTH) {
                 navigator.navigateToScreen(
                     FragmentScreen {
                         SearchFragment()

@@ -3,7 +3,7 @@ package com.lesa.search
 import com.lesa.data.models.Offer
 import com.lesa.data.models.Vacancy
 import com.lesa.search.models.OfferUI
-import com.lesa.search.models.VacancyUI
+import com.lesa.vacancy.VacancyUI
 
 internal fun Vacancy.toVacancyUI(): VacancyUI {
     return VacancyUI(

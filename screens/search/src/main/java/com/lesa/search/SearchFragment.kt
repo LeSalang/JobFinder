@@ -8,11 +8,16 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import by.kirich1409.viewbindingdelegate.viewBinding
+import com.github.terrakok.cicerone.androidx.FragmentScreen
+import com.lesa.navigation.Navigator
 import com.lesa.search.adapter.OfferAdapter
 import com.lesa.search.adapter.VacancyAdapter
 import com.lesa.search.databinding.FragmentSearchBinding
+import com.lesa.vacancy.VacancyFragment
+import com.lesa.vacancy.VacancyUI
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class SearchFragment : Fragment(R.layout.fragment_search) {
@@ -21,6 +26,9 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
 
     private lateinit var vacancyAdapter: VacancyAdapter
     private lateinit var offerAdapter: OfferAdapter
+
+    @Inject
+    lateinit var navigator: Navigator
 
     override fun onViewCreated(
         view: View,
@@ -70,7 +78,11 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
     }
 
     private fun setUpVacancyRecyclerView() {
-        vacancyAdapter = VacancyAdapter()
+        vacancyAdapter = VacancyAdapter(
+            onClick = { vacancy ->
+                openVacancy(vacancy)
+            }
+        )
         binding.vacanciesRecyclerView.layoutManager = LinearLayoutManager(requireContext())
         binding.vacanciesRecyclerView.adapter = vacancyAdapter
 
@@ -106,5 +118,13 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
                 }
             }
         }
+    }
+
+    private fun openVacancy(vacancy: VacancyUI) {
+        navigator.navigateToScreen(
+            FragmentScreen {
+                VacancyFragment.getNewInstance(vacancy)
+            }
+        )
     }
 }

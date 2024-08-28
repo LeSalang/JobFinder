@@ -37,5 +37,6 @@ dependencies {
     implementation(project(":core:navigation"))
     implementation(project(":core:ui_kit"))
     implementation(project(":data"))
+    implementation(project(":screens:vacancy"))
 }
 

@@ -4,4 +4,18 @@
     <string name="ask_employer_question">Ask the employer a question</string>
     <string name="employer_will_receive">They will receive it with your job application</string>
     <string name="apply_now">Apply Now</string>
+    <string name="required_experience">Required Experience: %s</string>
+    <plurals name="watching_people">
+        <item quantity="one">%d person is watching now</item>
+        <item quantity="few">%d people are watching now</item>
+        <item quantity="many">%d people are watching now</item>
+        <item quantity="other">%d people are watching now</item>
+    </plurals>
+    <plurals name="responded_people">
+        <item quantity="one">%d person has already responded</item>
+        <item quantity="few">%d people have already responded</item>
+        <item quantity="many">%d people have already responded</item>
+        <item quantity="other">%d people have already responded</item>
+    </plurals>
+
 </resources>

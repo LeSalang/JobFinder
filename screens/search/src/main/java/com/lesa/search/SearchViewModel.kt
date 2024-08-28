@@ -4,7 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.lesa.data.JobRepository
 import com.lesa.search.models.OfferUI
-import com.lesa.search.models.VacancyUI
+import com.lesa.vacancy.VacancyUI
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.launch

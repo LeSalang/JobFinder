@@ -8,13 +8,15 @@ import android.view.ViewGroup
 import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.RecyclerView
 import com.lesa.search.R
-import com.lesa.search.models.VacancyUI
 import com.lesa.ui_kit.databinding.ViewVacancyItemBinding
+import com.lesa.vacancy.VacancyUI
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 import java.util.Locale
 
-class VacancyAdapter : RecyclerView.Adapter<VacancyAdapter.VacancyViewHolder>() {
+class VacancyAdapter(
+    private val onClick: (VacancyUI) -> Unit
+) : RecyclerView.Adapter<VacancyAdapter.VacancyViewHolder>() {
 
     internal var data: List<VacancyUI> = emptyList()
         set(newValue) {
@@ -32,7 +34,7 @@ class VacancyAdapter : RecyclerView.Adapter<VacancyAdapter.VacancyViewHolder>() 
     ): VacancyViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(com.lesa.ui_kit.R.layout.view_vacancy_item, parent, false)
-        return VacancyViewHolder(view)
+        return VacancyViewHolder(view = view, onClick = onClick)
     }
 
     @RequiresApi(Build.VERSION_CODES.O)
@@ -44,27 +46,25 @@ class VacancyAdapter : RecyclerView.Adapter<VacancyAdapter.VacancyViewHolder>() 
         holder.bind(vacancy)
     }
 
-    class VacancyViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+    class VacancyViewHolder(view: View, val onClick: (VacancyUI) -> Unit) : RecyclerView.ViewHolder(view) {
         private val binding = ViewVacancyItemBinding.bind(itemView)
 
+        @Suppress("LongMethod")
         @RequiresApi(Build.VERSION_CODES.O)
         fun bind(vacancy: VacancyUI) {
+            binding.root.setOnClickListener {
+                onClick(vacancy)
+            }
+
             if (vacancy.lookingNumber != null) {
                 binding.vacancyViewers.visibility = View.VISIBLE
                 binding.vacancyViewers.text = itemView.resources.getQuantityString(
-                    com.lesa.ui_kit.R.plurals.viewing_people,
-                    vacancy.lookingNumber,
+                    com.lesa.ui_kit.R.plurals.viewing_people, vacancy.lookingNumber!!,
                     vacancy.lookingNumber
                 )
             } else {
                 binding.vacancyViewers.visibility = View.GONE
             }
-
-/*            if (vacancy.isFavorite != null && vacancy.isFavorite == true) {
-                binding.ivFavorite.setImageResource(com.lesa.ui_kit.R.drawable.ic_favourites_active)
-            } else {
-                binding.ivFavorite.setImageResource(com.lesa.ui_kit.R.drawable.ic_favourites_active)
-            }*/
 
             if (vacancy.isFavorite == true) {
                 binding.ivFavorite.setImageResource(com.lesa.ui_kit.R.drawable.ic_favourites_active)
@@ -113,7 +113,11 @@ class VacancyAdapter : RecyclerView.Adapter<VacancyAdapter.VacancyViewHolder>() 
 
             if (vacancy.publishedDate != null) {
                 val local = Locale.getDefault()
-                val dateString = formatPublishedDate(itemView.context, vacancy.publishedDate, local)
+                val dateString = formatPublishedDate(
+                    itemView.context,
+                    vacancy.publishedDate!!,
+                    local
+                )
                 binding.vacancyDate.visibility = View.VISIBLE
                 binding.vacancyDate.text = dateString
             } else {

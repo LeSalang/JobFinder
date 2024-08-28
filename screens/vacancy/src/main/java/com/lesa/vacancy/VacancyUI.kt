@@ -1,5 +1,9 @@
-package com.lesa.search.models
+package com.lesa.vacancy
 
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
+
+@Parcelize
 data class VacancyUI(
     val id: String,
     val lookingNumber: Int? = null,
@@ -18,4 +22,4 @@ data class VacancyUI(
     val description: String? = null,
     val responsibilities: String? = null,
     val questions: List<String>? = null
-)
+) : Parcelable

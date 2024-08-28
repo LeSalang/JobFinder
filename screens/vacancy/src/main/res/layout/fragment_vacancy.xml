@@ -20,6 +20,7 @@
             >
 
             <ImageView
+                android:id="@+id/vacancyIconBack"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:src="@drawable/ic_back"
@@ -43,12 +44,14 @@
                 android:layout_marginEnd="16dp" />
 
             <ImageView
+                android:id="@+id/vacancyIconFavorite"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:src="@drawable/ic_favourites" />
         </LinearLayout>
 
         <TextView
+            android:id="@+id/vacancyTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="26dp"
@@ -57,6 +60,7 @@
             />
 
         <TextView
+            android:id="@+id/vacancySalary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -65,6 +69,7 @@
             />
 
         <TextView
+            android:id="@+id/vacancyExperience"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -73,6 +78,7 @@
             />
 
         <TextView
+            android:id="@+id/vacancySchedules"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="6dp"
@@ -81,6 +87,7 @@
             />
 
         <LinearLayout
+            android:id="@+id/vacancyRespondedPeopleBlock"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -97,6 +104,7 @@
                 >
 
                 <TextView
+                    android:id="@+id/vacancyRespondingPeopleText"
                     android:layout_width="0dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
@@ -112,6 +120,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/vacancyWatchingPeopleBlock"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -121,6 +130,7 @@
                 >
 
                 <TextView
+                    android:id="@+id/vacancyWatchingPeopleText"
                     android:layout_width="0dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
@@ -153,6 +163,7 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    android:id="@+id/vacancyCompany"
                     style="@style/Title3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -176,6 +187,7 @@
                 android:src="@drawable/sample_map_yandex" />
 
             <TextView
+                android:id="@+id/vacancyLocation"
                 style="@style/Text1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -184,6 +196,7 @@
         </LinearLayout>
 
         <TextView
+            android:id="@+id/vacancyDescription"
             style="@style/Text1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -195,9 +208,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            tool:text="@string/your_tasks" />
+            android:text="@string/your_tasks" />
 
         <TextView
+            android:id="@+id/vacancyResponsibilities"
             style="@style/Text1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -209,7 +223,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
-            tool:text="@string/ask_employer_question" />
+            android:text="@string/ask_employer_question" />
 
         <TextView
             style="@style/Title4"
@@ -217,7 +231,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:textColor="@color/grey_3"
-            tool:text="@string/employer_will_receive" />
+            android:text="@string/employer_will_receive" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/vacanciesRecyclerView"
@@ -226,10 +240,10 @@
             android:orientation="vertical"
             android:layout_marginTop="16dp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            tool:listitem="@layout/view_question" />
+            tool:listitem="@layout/view_question_item" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/buttonMore"
+            android:id="@+id/vacancyApplyButton"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginTop="16dp"
@@ -238,7 +252,5 @@
             android:enabled="true"
             style="@style/BtnBigGreen" />
     </LinearLayout>
-
-
 
 </androidx.core.widget.NestedScrollView>

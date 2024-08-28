@@ -4,4 +4,18 @@
     <string name="ask_employer_question">Задайте вопрос работодателю</string>
     <string name="employer_will_receive">Он получит его с откликом на вакансию</string>
     <string name="apply_now">Откликнуться</string>
+    <string name="required_experience">Требуемый опыт: %s</string>
+    <plurals name="watching_people">
+        <item quantity="one">%d человек сейчас смотрит</item>
+        <item quantity="few">%d человека сейчас смотрят</item>
+        <item quantity="many">%d человек сейчас смотрят</item>
+        <item quantity="other">%d человек сейчас смотрят</item>
+    </plurals>
+    <plurals name="responded_people">
+        <item quantity="one">%d человек уже откликнулся</item>
+        <item quantity="few">%d человека уже откликнулись</item>
+        <item quantity="many">%d человек уже откликнулись</item>
+        <item quantity="other">%d человек уже откликнулись</item>
+    </plurals>
+
 </resources>
