@@ -17,5 +17,5 @@ Test Android app for Effective Mobile
 ### Screenshots
 
 <p align="center">
-<img src = ".git/search.png" width="32%" />&nbsp;<img src = ".git/vacancy.png" width="32%" />&nbsp;<img src = ".git/response.png" width="32%" />
+<img src = "git/search.png" width="32%" />&nbsp;<img src = "git/vacancy.png" width="32%" />&nbsp;<img src = "git/response.png" width="32%" />
 </p>
