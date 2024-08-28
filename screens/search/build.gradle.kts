@@ -39,4 +39,3 @@ dependencies {
     implementation(project(":data"))
     implementation(project(":screens:vacancy"))
 }
-
