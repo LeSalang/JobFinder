@@ -6,14 +6,18 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import by.kirich1409.viewbindingdelegate.viewBinding
+import com.lesa.navigation.Navigator
 import com.lesa.vacancy.databinding.FragmentVacancyBinding
 import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class VacancyFragment : Fragment(R.layout.fragment_vacancy) {
     private val viewModel: VacancyViewModel by viewModels()
     private val binding: FragmentVacancyBinding by viewBinding()
     private lateinit var questionAdapter: QuestionAdapter
+    @Inject
+    lateinit var navigator: Navigator
 
     override fun onViewCreated(
         view: View,
@@ -45,7 +49,7 @@ class VacancyFragment : Fragment(R.layout.fragment_vacancy) {
 
     private fun setUpBackButton() {
         binding.vacancyIconBack.setOnClickListener {
-            // TODO: Navigate to SearchFragment
+            navigator.back()
         }
     }
 

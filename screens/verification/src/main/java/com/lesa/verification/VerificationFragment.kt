@@ -30,7 +30,7 @@ class VerificationFragment : Fragment(R.layout.fragment_verification) {
     private fun onConfirmButtonClicked() {
         binding.buttonConfirm.setOnClickListener {
             if (binding.otpView.getOtp().length == CODE_LENGTH) {
-                navigator.navigateToScreen(
+                navigator.newRootScreen(
                     FragmentScreen {
                         SearchFragment()
                     }
